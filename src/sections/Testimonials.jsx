@@ -5,14 +5,14 @@ const testimonials = [
   {
     quote:
       "EM.dev's work on our project was outstanding. Their attention to detail and commitment to quality exceeded our expectations.",
-    author: "Jane Doe",
+    author: "Jane white",
     role: "CEO, Tech Company",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
     quote:
       "I highly recommend EM.dev for any web development needs. They delivered beyond what we imagined.",
-    author: "Jane Smith",
+    author: "Assimwe Smith",
     role: "Marketing Director, Startup",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg",
   },
