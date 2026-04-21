@@ -4,17 +4,15 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "EM.dev's work on our project was outstanding. Their attention to detail and commitment to quality exceeded our expectations.",
-    author: "Jane white",
-    role: "CEO, Tech Company",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+      "Emmanuel's work on our project was outstanding. Their attention to detail and commitment to quality exceeded our expectations.",
+    author: "Kevin Mukama",
+    role: "Developer, Refactory",
   },
   {
     quote:
-      "I highly recommend EM.dev for any web development needs. They delivered beyond what we imagined.",
-    author: "Assimwe Smith",
-    role: "Marketing Director, Startup",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+      "I highly recommend Emmanuel for any web,website, or mobile development needs. They delivered beyond what we imagined.",
+    author: "Grace Suubi",
+    role: "Design Lead, Refactory",
   },
 ];
 

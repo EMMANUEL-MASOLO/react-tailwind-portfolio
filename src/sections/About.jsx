@@ -46,7 +46,7 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software developer with expertise in creating modern web applications. I enjoy solving complex problems and turning ideas into reality through code.
+                I'm a passionate software developer with expertise in creating modern websites, web applications, and mobile applications. I enjoy solving complex problems and turning ideas into reality through code.
               </p>
               <p>
                 With a strong foundation in both front-end and back-end technologies, I specialize in building seamless digital experiences that are not only visually appealing but also highly functional.
