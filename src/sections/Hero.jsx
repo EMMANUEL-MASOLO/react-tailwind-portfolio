@@ -3,10 +3,7 @@ import { ArrowRight, Linkedin, Github } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
-  "JavaScript",
   "React",
-  "Node.js",
-  "Strapi",
   "Python",
   "Django",
   "PostgreSQL",
@@ -52,7 +49,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Full-Stack Software Engineer
+                 Software Engineer
               </span>
             </div>
 
@@ -66,7 +63,7 @@ export const Hero = () => {
                 <span className="font-serif italic font-normal text-white">precision.</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in">
-                Hi I'm Emmanuel Masolo - a full-stack software engineer with a passion for crafting seamless digital experiences. With expertise in both front-end and back-end development, I specialize in building robust web applications that are not only visually stunning but also highly functional. My commitment to precision and attention to detail ensures that every project I undertake is executed with excellence, delivering exceptional results for clients and users alike.
+                Hi I'm Emmanuel Masolo - Junior software engineer with a passion for crafting seamless digital experiences. With experience in Python, Django, and React technologies, I am dedicated to continuous learning and growth, always eager to take on new challenges and contribute to innovative projects.
               </p>
             </div>
 
