@@ -49,10 +49,7 @@ export const About = () => {
                 I'm a passionate software developer with expertise in creating modern websites, web applications, and mobile applications. I enjoy solving complex problems and turning ideas into reality through code.
               </p>
               <p>
-                With a strong foundation in both front-end and back-end technologies, I specialize in building seamless digital experiences that are not only visually appealing but also highly functional.
-              </p>
-              <p>
-                When I'm coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I'm always eager to take on new challenges and collaborate on innovative projects that push the boundaries of what's possible in software development.
+                 Junior software engineer with a passion for crafting seamless digital experiences. With experience in Python, Django, and React technologies, I am dedicated to continuous learning and growth, always eager to take on new challenges and contribute to innovative projects.
               </p>
             </div>
 
