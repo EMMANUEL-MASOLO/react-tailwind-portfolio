@@ -14,8 +14,6 @@ const testimonials = [
     author: "Grace Suubi",
     role: "Design Lead, Refactory",
   },
-   quote:
-      ".",
 ];
 
 export const Testimonials = () => {
