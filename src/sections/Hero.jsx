@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button";
-import { ArrowRight, Linkedin, Github, Twitter } from "lucide-react";
+import { ArrowRight, Linkedin, Github } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
@@ -84,7 +84,6 @@ export const Hero = () => {
               {[
                 { Icon: Github, url: "https://github.com/Emmanuel-Masolo" },
                 { Icon: Linkedin, url: "https://www.linkedin.com/in/EmmanuelMasolo" },
-                { Icon: Twitter, url: "https://twitter.com/EmmanuelMasolo" },
               ].map((social, index) => (
                 <a
                   key={index}
