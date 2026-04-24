@@ -6,15 +6,14 @@ const experience = [
     description:
       "Leading the backend team in developing scalable and efficient solutions for our clients. Responsible for overseeing the architecture, design, and implementation of backend systems, ensuring high performance and reliability.",
     technologies: ["Node.js", "React", "PostgreSQL", "AWS", "Python", "Django", "Strapi"],
-    current: true,
+    current: false,
   },
   {
-    period: "2024 - 2025",
-    company: "Karibu.",
-    role: "Software Engineer",
+    period: "2014 - 2017",
+    company: "Nkumba University.",
+    role: "Bachelor's Degree in IT",
     description:
-      "Developing and maintaining web applications using modern technologies. Collaborating with cross-functional teams to deliver high-quality software solutions.",
-    technologies: ["Python", "Django", "PostgreSQL", "AWS"],
+      "Bachelor’s in Information Technology (BIT).",
     current: false,
   },
 ];
@@ -32,19 +31,18 @@ export const Experience = () => {
           <span
             className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animated-fade-in"
           >
-            Career Journey
+            Educational Journey
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
           >
-            Experience that{" "}
+            Educational {" "}
             <span className="font-serif italic font-normal text-white">
-              speaks volumes.
+              Background.
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A timeline of my professional growth, showcasing the roles, responsibilities,
-            and technologies I've mastered along the way.
+            A timeline of my educational journey and academic achievements.
           </p>
         </div>
 
