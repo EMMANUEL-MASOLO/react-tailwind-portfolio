@@ -1,105 +1,107 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+
 const experience = [
   {
-    period: "2025 - Present",
-    company: "Refactory.",
-    role: "Backend lead",
-    description:
-      "Leading the backend team in developing scalable and efficient solutions for our clients. Responsible for overseeing the architecture, design, and implementation of backend systems, ensuring high performance and reliability.",
-    technologies: ["Node.js", "React", "PostgreSQL", "AWS", "Python", "Django", "Strapi"],
-    current: false,
+    quote:
+      "Emmanuel's work on our project was outstanding. Their attention to detail and commitment to quality exceeded our expectations.",
+    author: "Kevin Mukama",
+    role: "Developer, Refactory",
   },
   {
-    period: "2014 - 2017",
-    company: "Nkumba University.",
-    role: "Bachelor's Degree in IT",
-    description:
-      "Bachelor’s in Information Technology (BIT).",
-    current: false,
+    quote:
+      "I highly recommend Emmanuel for any web,website, or mobile development needs. They delivered beyond what we imagined.",
+    author: "Grace Suubi",
+    role: "Design Lead, Refactory",
   },
 ];
 
 export const Experience = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const next = () => {
+    setActiveIndex((prev) => (prev + 1) % experience.length);
+  };
+
+  const prev = () => {
+    setActiveIndex((prev) => (prev - 1 + experience.length) % experience.length);
+  };
+
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
+    <section id="apprenticeships" className="py-32 relative overflow-hidden">
       <div
-        className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
+        className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
       />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <span
-            className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animated-fade-in"
-          >
-            Educational Journey
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+            what People Say
           </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
-          >
-            Educational {" "}
-            <span className="font-serif italic font-normal text-white">
-              Background.
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-2 animate-fade-in animation-delay-100 text-secondary-foreground">
+            Kind words from {" "}
+            <span className="font-serif italic font-normal text-white">amazing people.</span>
           </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A timeline of my educational journey and academic achievements.
-          </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
+        {/* Testimonials Carousel */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            {/* Main Testimonial */}
+            <div className="glass p-8 rounded-3xl animate-fade-in animation-delay-200">
+              <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                <Quote className="w-6 h-6 text-primary-foreground" />
+              </div>
 
-          {/* Experience Items */}
-          <div className="space-y-12">
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
-                style={{ animationDelay: `${(index + 1) * 200}ms` }}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
-                  {exp.current && (
-                    <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
-                  )}
-                </div>
+              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4">
+                "{experience[activeIndex].quote}"
+              </blockquote>
 
-                {/* Content */}
-                <div
-                  className={`pl-8 md:pl-0 ${
-                    index % 2 === 0
-                      ? "md:pr-16 md:text-right"
-                      : "md:col-start-2 md:pl-16"
-                  }`}
-                >
-                  <div className="glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
-                    <span className="text-sm text-primary font-medium">
-                      {exp.period}
-                    </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {exp.description}
-                    </p>
-                    <div
-                      className={`flex flex-wrap gap-2 mt-4 ${
-                        index % 2 === 0 ? "md:justify-end" : ""
-                      }`}
-                    >
-                      {exp.technologies.map((tech, techidx) => (
-                        <span
-                          key={techidx}
-                          className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div className="flex items-center gap-4">
+                <img
+                  src={experience[activeIndex].avatar}
+                  alt={experience[activeIndex].author}
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
+                />
+                <div>
+                  <div className="font-semibold">{experience[activeIndex].author}</div>
+                  <div className="text-sm text-muted-foreground">{experience[activeIndex].role}</div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Testimonial Navigation */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <button
+                type="button"
+                onClick={prev}
+                className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <ChevronLeft />
+              </button>
+
+              <div className="flex gap-2">
+                {experience.map((_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      index === activeIndex ? "w-8 bg-primary" : "w-2 bg-muted-foreground/50"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={next}
+                className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <ChevronRight />
+              </button>
+            </div>
           </div>
         </div>
       </div>
